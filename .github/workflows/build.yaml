@@ -1,3 +1,8 @@
+name: android_build
+
+on:
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,9 +18,7 @@ jobs:
 
       - id: get-project
         name: Get project name
-        run: |
-          PROJECT=$(cat project-to-build)
-          echo "PROJECT=$PROJECT" >> $GITHUB_OUTPUT
+        run: echo "::set-output name=PROJECT::$(cat project-to-build)"
 
       - name: Clone project
         run: git clone --depth=1 ${{ steps.get-project.outputs.PROJECT }} project
