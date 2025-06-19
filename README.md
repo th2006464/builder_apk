@@ -1,7 +1,9 @@
-# Android Builder
+# Android Builder APK
 
-该仓库是使用 Github Action 自动编译 Android 项目的一种展示。具体解释可见下面的文章：
+该仓库是使用 Github Action 自动编译 Android 项目文件并导出APK
 
-[《更新慢、弃坑了？实现 Android 应用自给自足：GitHub Actions 编译实例》](https://sspai.com/post/70427)
+使用方法:
+Fork 后更新project-to-build文件内容为需要编译的地址
 
-如果这篇文章帮到了你，不妨回来点个赞。
+*注意仓库需要.git结尾的连接
+*运行完毕后点开 Workflow 在 Summary 的选项卡中找到 Artifacts，即可下载带 APK 的压缩包。
